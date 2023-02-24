@@ -31,9 +31,12 @@ function App() {
       />
       <button onClick={() => addTodo(input)}>Add ToDo</button>
       <ul>
-        {list.map}
-        <li key={todo.id}>{todo.todo}</li>
-        <button onClick={() => deleteTodo(todo.id)}>&times;</button>
+        {list.map((todo) => (
+          <li key={todo.id}>
+            {todo.todo}
+            <button onClick={() => deleteTodo(todo.id)}>&times;</button>
+          </li>
+        ))}
       </ul>
     </div>
   );
